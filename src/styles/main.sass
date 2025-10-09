@@ -1,0 +1,47 @@
+// utils
+@use 'utils/color' as *
+// @use './utils/placeholder'
+
+//Vendors
+// Import only what you need, or full Bootstrap
+@use 'vendors/bootstrap'
+// @use '../../node_modules/bootstrap/scss/bootstrap';
+
+// base layout
+@use 'base/base' as *
+
+@use 'layout/navbar'
+
+// themes
+@use 'themes/theme'
+
+
+
+
+
+
+// //pages
+
+body, html
+    color: $text-default
+    scroll-behavior: smooth
+    -ms-text-size-adjust: 100%
+    -webkit-text-size-adjust: 100%
+    text-rendering: optimizeLegibility
+    -webkit-font-smoothing: antialiased
+    -moz-font-smoothing: unset
+    -moz-osx-font-smoothing: grayscale
+    font-smoothing: antialiased
+    -webkit-backface-visibility: hidden
+    -moz-backface-visibility: hidden
+    backface-visibility: hidden
+    scroll-padding-top: 125px
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.005)
+    font-weight: 400
+    line-height: 1.5
+    font-size: 14px
+    background-color: $primary-color
+
+
+
+

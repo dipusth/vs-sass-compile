@@ -1,0 +1,162 @@
+.tag
+    font-size: 0.88rem
+    line-height: 0.88rem
+    background-color: $primary-100
+    color: $primary-color
+    padding: 8px 12px
+    text-align: center
+    @extend .border-r-20
+    @extend %capitalise
+    @extend %head-font
+    +display-inline-flex
+    +align-items(center)
+    +justify-content(center)
+    min-width: 4.9375rem
+    &:hover
+        cursor: pointer
+    &--primary
+        background-color: $info-default
+        color: $white-color
+    &-outline
+        &--secondary
+            background-color: transparent
+            border: 1px solid $white-color
+            color: $white-color
+            &.inactive
+                border-color: $text-600
+                color: $text-400
+            &.active, &:hover
+                background-color: $white-color
+                color: $primary-900
+                border-color: $white-color
+
+    &--no-bg
+        font-size: 1rem
+        line-height: 1.71
+        background-color: transparent
+        padding: 0
+        margin-bottom: 0.45rem
+        @extend %body-font
+        +desktop-mini
+            margin-bottom: 0.6429rem
+    &-icon
+        background: $info-100
+        padding: 1rem
+        @extend .border-r-10
+        border: 1px solid $info-200
+        @extend .icon
+        &.tag-icon--hasShadow
+            @extend %relative
+            &:before
+                height: 100%
+                width: 100%
+                +gradient(180deg, #ECE6F2 0%, rgba(236, 230, 242, 0) 100%)
+                @extend .border-r-10
+                @extend %absolute
+                @extend %content
+                top: 1px
+                left: 4px
+                z-index: -1
+        &.tag-download
+            height: 50px
+            width: 50px
+        .integration-phone-system &
+            width: 37px
+            height: 40px
+            padding: 0
+            @extend .item-center
+    &-switch
+        @extend %head-font
+        @extend %regular
+        padding: 6px 8px
+        +border-radius(5px)
+        margin-left: .75rem
+        background-color: $success-100
+        color: $success-color
+    &-ribbon
+        @extend %absolute
+        font-size: 14px
+        background: #D7CCE4
+        color: #390179
+        line-height: 18px
+        top: 30px
+        left: 115px
+        transform: rotate(30deg)
+        padding: 10px 100px
+        @extend %head-font
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15)
+        @extend .text-center
+        +desktop-mini
+            font-size: 16px
+            top: 10px
+            left: 35px
+        +laptop
+            top: 20px
+            left: 80px
+        +fullhd
+            font-size: 18px
+            top: 30px
+            left: 115px
+    &-md
+        min-height: 2.5rem
+        font-size: 1rem
+        line-height: 1.4
+    &-sm
+        height: 50px
+        width: 50px
+        +border-radius(12px)
+        background-repeat: no-repeat
+        background-position: center
+        +box-shadow(0px 6px 30px rgba(196, 196, 196, 0.25))
+        @extend .item-center
+        cursor: pointer
+        &--font
+            height: 61px
+            width: 61px
+            background-image: url('/src/assets/images/svg/icons/icon-font.svg')
+        &.absolute
+            @extend %absolute
+            right: 35px
+            bottom: -35px
+    &-bg
+        &__green
+            background-color: #EFF7E4
+        &__orange
+            background-color: #F4EBEA
+        &__pink
+            background-color: #FDEDFE
+    &-small
+        font-size: .625rem
+        padding: .125rem .375rem
+        vertical-align: middle
+    &-corner
+        transform: rotate(45deg)
+        position: absolute
+        right: -50px
+        top: 28px
+        text-align: center
+        padding: 6px 28px
+        width: 180px
+        text-transform: uppercase
+        z-index: 1
+        +box-shadow(0 3px .3125rem rgba(0,0,0, 0.5))
+        p
+            font-size: 0.75rem
+            line-height: 12px
+            color: $white-color
+        &.purple
+            background-color: $primary-color
+
+    .tag-group &
+        &:not(:last-child)
+            margin-right: 0.63rem
+            +tablet
+                margin-right: 1rem
+            +fullhd
+                margin-right: 1.5rem
+        .hero-panel &
+            margin-top: 0.63rem
+            +tablet
+                margin-top: 1rem
+            +fullhd
+                margin-top: 1.25rem
