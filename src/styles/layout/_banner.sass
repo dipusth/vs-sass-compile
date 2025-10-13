@@ -1,0 +1,15 @@
+@use '../utils/all' as *
+.hero
+    &-wrapper
+        min-height: 100vh
+        display: table
+        width: 100%
+        @extend %relative
+        p
+            font-size: 1.1875rem
+    &-content
+        display:  table-cell
+        vertical-align: middle
+        p
+            +desktop
+                padding: 0 15%

@@ -1,3 +1,5 @@
+// @use '../utils/all' as *
+
 .btn
     font-size: 14px
     line-height: 1
@@ -8,19 +10,22 @@
     outline: 0
     height: 44px
     vertical-align: middle
-    @extend .text-center
+    text-align: center
     transition: all .5s ease
     border-radius: 8px
-    +mx.box-shadow(none)
-    @extend %head-font
+    +box-shadow(none)
+    max-width: 11.25rem
+    @extend %body-font
     & + .btn
         margin-left: 20px
+    +desktop
+        max-width: 13.125rem
     +mobile-sm-max
         min-width: 100%
         width: 100%
     &:focus,
     &:not(:disabled):not(.disabled):active:focus
-        +mx.box-shadow(none)
+        +box-shadow(none)
     & +
         .btn
             margin-left: 1.5rem
@@ -51,25 +56,25 @@
             fill: $white-color
 
         &.has-shadow
-            +mx.box-shadow(0px 5px 50px rgba(57, 1, 121, 0.3))
+            +box-shadow(0px 5px 50px rgba(57, 1, 121, 0.3))
             +mobile-sm
-                +mx.box-shadow(0px 15px 50px rgba(57, 1, 121, 0.3))
+                +box-shadow(0px 15px 50px rgba(57, 1, 121, 0.3))
 
     &-secondary
         background-color: $primary-200
         border-color: $primary-200
         color: $primary-color
-        +mx.box-shadow(0px 15px 50px rgba(0, 0, 0, 0.1))
+        +box-shadow(0px 15px 50px rgba(0, 0, 0, 0.1))
         &:hover,
         &:focus
             background-color: $primary-200
             border-color: $primary-200
             color: $primary-color
-            +mx.box-shadow(0px 15px 50px rgba(0, 0, 0, 0.2))
+            +box-shadow(0px 15px 50px rgba(0, 0, 0, 0.2))
         &:not(:disabled):not(.disabled):active
             background-color: $primary-color
             color: $white-color
-            +mx.box-shadow(0px 15px 50px rgba(0, 0, 0, 0.2))
+            +box-shadow(0px 15px 50px rgba(0, 0, 0, 0.2))
             .arrow-fill-right
                 border-left: 12px solid $white-color
     &-tertiary
@@ -103,17 +108,17 @@
                 border-color: $primary-400
                 background-color: transparent
             &:focus
-                +mx.box-shadow(none)
+                +box-shadow(none)
             &:not(:disabled):not(.disabled):active, &:focus,
             &:not(:disabled):not(.disabled):active:focus
                 color: $primary-500
                 border-color: $primary-400
                 background-color: $white-color
-                +mx.box-shadow(none)
+                +box-shadow(none)
             &.br-3
                 border-radius: 3px
             &.has-shadow
-                +mx.box-shadow(0px 7.26404px 14.5281px rgba(57, 1, 121, 0.05))
+                +box-shadow(0px 7.26404px 14.5281px rgba(57, 1, 121, 0.05))
             &.bw
                 border-width: 1.45px
                 background-color: rgba($white-color, 0.7)
@@ -175,7 +180,7 @@
         padding: 1.5625rem 1.6875rem
         min-height: 5.25rem
     &-shadow
-        +mx.box-shadow(0px 5px 10px rgba(0, 0, 0, 0.1))
+        +box-shadow(0px 5px 10px rgba(0, 0, 0, 0.1))
     &-dashed
         border: 1px dashed #D7CCE4
         border-radius: 2px

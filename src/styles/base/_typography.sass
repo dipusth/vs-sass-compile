@@ -2,11 +2,11 @@
 @use '../utils/placeholder'
 @use '../utils/responsive' as R
 h1,h2,h3,h4,h5,h6
-    @extend %head-font
+    @extend %body-font
 
 h1
     line-height: 1.5
-    font-size: 4.5rem //72px
+    font-size: 4.1rem
 h2
     line-height: 1.35
     font-size: 3rem //48px
@@ -26,40 +26,40 @@ h6
 .text
     &-1
         line-height: 1.5
-        @extend %head-font
+        @extend %body-font
         font-size: 2.9rem //72px
         +R.laptop
-            font-size: 4.5rem //72px
+            font-size: 4.1875rem //67px
     &-2
         line-height: 1.18
-        @extend %head-font
+        @extend %body-font
         font-size: 2.2rem //48px
         +R.laptop
             font-size: 3rem
 
     &-3
-        @extend %head-font
+        @extend %body-font
         font-size: 2rem
         line-height: 1.4
         +R.fullhd
             font-size: 2.5rem //40px
     &-4
         line-height: 1.1
-        @extend %head-font
+        @extend %body-font
         font-size: 1.8rem
         +R.fullhd
             font-size: 2rem //32px
     &-5
-        @extend %head-font
+        @extend %body-font
         line-height: 1.5
         font-size: 1.75rem //28px
     &-6
         line-height: 1.2
-        @extend %head-font
+        @extend %body-font
         font-size: 1.5rem //24px
     &-7
         line-height: 1.2
-        @extend %head-font
+        @extend %body-font
         font-size: 1.38rem //22px
     &-8
         line-height: 1.4
@@ -131,4 +131,4 @@ h6
 .body-font
     @extend %body-font
 .title
-    @extend %head-font
+    @extend %body-font

@@ -1,7 +1,7 @@
-@use '../utils/mixins/mixin' as *
-@use '../utils/color' as *
-@use '../utils/placeholder'
-@use '../utils/responsive' as R
+// @use '../utils/mixins/mixin' as *
+// @use '../utils/color' as *
+// @use '../utils/placeholder'
+// @use '../utils/responsive' as R
 img
     max-width: 100%
     height: auto
@@ -27,11 +27,11 @@ img
             width: auto !important
             .error-404 &
                 max-height: 250px
-                +R.fullhd
+                +fullhd
                     max-height: inherit
             .error-server &
                 max-height: 250px
-                +R.fullhd
+                +fullhd
                     max-height: inherit
     &--absolute
         @extend %absolute
@@ -44,7 +44,7 @@ small
     font-size: 0.5em
     // font-family: 'Montserrat', sans-serif
     margin-bottom: 3px
-    +R.desktop
+    +desktop
         font-size: 0.45em
 
 blockquote

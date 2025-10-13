@@ -1,7 +1,7 @@
 
-@use '../utils/all' as *
-@use 'typography'
-@use 'reset'
+@import '../utils/all'
+@import 'typography'
+@import 'reset'
 
 *:focus 
     outline: none
@@ -168,18 +168,28 @@ h1,h2, p
             border-style: solid
     &-none
         border: none
+
+
 .bg
-    &-white
-        background-color: rgba($white-color , 1) !important
-    &-light
-        background-color: rgba($text-100, 1) !important
-        &-gradient
-            // +gradient(45deg, #015d46, #3a6782)
-            // +gradient(45deg, #0c0e0d, #334b6f)
-            // linear-gradient(45deg, #0c0e0d, #334b6f)
-            // linear-gradient(45deg, #1b3640, #80281a) second option
-            //background: linear-gradient(180deg, rgba(243, 247, 254, 0.24) 0%, rgba(243, 247, 254, 0) 100%);
-            //linear-gradient(180deg, rgba(243, 247, 254, 0.24), rgba(243, 247, 254, 0))
+    &-overlay
+        background-color: $gray-dark
+        opacity: 0.8
+        position: absolute
+        top: 0
+        left: 0
+        height: 100%
+        width: 100%
+        z-index: 2
+    +desktop-max
+        display: none
+    &-gradient
+        &--white
+            background-color: rgba($white-color , 1) !important
+        &--light
+            background-color: rgba($text-100, 1) !important
+        &--blue
+            +gradient(to bottom, #002953, #002D5B)
+
     &-primary
         background-color: rgba($primary-color , 1) !important
     //&-success
@@ -190,6 +200,10 @@ h1,h2, p
         background-attachment: fixed
     &-light, &-white
         color: $black-color
+    &-img
+        background-position: center
+        background-repeat: no-repeat
+        background-size: cover
 
 //item link
 .link
@@ -481,22 +495,19 @@ a
 .mx-diff
     mix-blend-mode: difference
 
-.bkg-overlay
-    background-color: $gray-dark
-    opacity: 0.5
-    mix-blend-mode: multiply
-    position: fixed
-    top: 0
-    left: 0
-    height: 100vh
-    width: 100%
-    z-index: 5
-    animation: fadeSlow .7s 
-    +desktop-max
-        display: none
+.z
+    &-10
+        @extend %relative
+        z-index: 10
+    &-99
+        @extend %relative
+        z-index: 99
+
+[class*="z-"] 
+    @extend %relative
 
 .triangle 
-    position: relative
+    @extend %relative
     z-index: 1
 
     &::before 
@@ -546,7 +557,7 @@ dl
     text-align: left
     dt
         @extend .text-smbold
-        @extend %head-font
+        @extend %body-font
         @extend .text-8
         @extend .text-600
         & + dd
