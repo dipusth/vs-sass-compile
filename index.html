@@ -28,6 +28,13 @@
 
   <section class="hero-wrapper bg-img" style="background-image: url('./src/images/hero.png');">
     <div class="bg-overlay bg-gradient--blue"></div>
+    <div class="hero-bg position-absolute h-100">
+      <video class="h-100" autoplay muted loop poster="/src/images/hero.png">
+      <source src="/src/video/hero-vdo.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    </div>
     <header class="z-99 position-fixed w-100">
       <div class="container">
         <div class="row">
@@ -78,7 +85,7 @@
         </div>
       </div>
     </header>
-    <div class="hero-content z-10 text-center relative-block my-5">
+    <div class="hero-content container-mid z-10 text-center relative-block my-5">
       <div class="container">
         <div class="row">
           <h1 class="text-smbold text-1 pb-1">Beautiful analytics to grow smarter</h1>
@@ -94,14 +101,14 @@
 
     <div class="container">
       <div class="row">
-        <div class="text-center py-4 headline-center">
+        <div class="text-center container-mid py-4 headline-center">
           <h1 class="text-3 pb-1">Campaign</h1>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid in, assumenda praesentium quos omnis modi
             molestias vel debitis rerum labore eveniet temporibus doloremque quas repudiandae cumque sit? Beatae,
             dignissimos debitis!</p>
         </div>
         <div class="col-sm-4">
-          <div class="card p-0">
+          <div class="card p-0 box-shadow">
             <div class="card-img">
               <img src="./src/images/open-data-directive.png" alt="Open Data Directive" />
             </div>
@@ -114,7 +121,7 @@
           </div>
         </div>
         <div class="col-sm-4">
-          <div class="card p-0">
+          <div class="card p-0 box-shadow">
             <div class="card-img">
               <img src="./src/images/beneficail-ownership.png" alt="Beneficail Ownership" />
             </div>
@@ -127,7 +134,7 @@
           </div>
         </div>
         <div class="col-sm-4">
-          <div class="card p-0">
+          <div class="card p-0 box-shadow">
             <div class="card-img">
               <img src="./src/images/eu-recovery-transparency.png" alt="Eu Recovery Transparency" />
             </div>
